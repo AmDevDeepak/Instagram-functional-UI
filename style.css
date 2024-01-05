@@ -1,307 +1,294 @@
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: sans-serif;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
 
-    html, body{
-        width: 100%;
-        height: 100%;
-    }
-    body{
-        background-color: rgb(0, 0, 0);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+html, body {
+  width: 100%;
+  height: 100%;
+}
 
-    .nav{
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 12px 10px;
-        margin-top: 15px;
-        /*background-color: red;*/
-    }
+body {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .nav img{
-        width: 90px;     
-    }
+.nav {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 10px;
+  margin-top: 15px;
+  /*background-color: red;*/
+}
 
-    .nav-right{
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        color: white;
-        padding: 0 8px;
-    }
+.nav img {
+  width: 90px;
+}
 
-    .card{
-        height: 510px;
-        width: 278px;
-        background-color: #fff;
-        border-radius: 15px;
-        /*border: 3px solid white;*/
-        overflow: hidden;
-        position: relative;
-        background-color: black;
-        box-shadow: -5px -5px 10px #1c1b1bde, 5px 5px 20px #464444;
-    }
-    
-    .stories{
-        height: 65px;
-        width: 100%;
-        padding: 0px 10px;
-        overflow-x: auto;
-        overflow-y: hidden;
-        background-color: black;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        flex-direction: row;
-    }
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: white;
+  padding: 0 8px;
+}
 
-    .stories::-webkit-scrollbar{
-        display: none;
-    }
+.card {
+  height: 510px;
+  width: 278px;
+  background-color: #fff;
+  border-radius: 15px;
+  /*border: 3px solid white;*/
+  overflow: hidden;
+  position: relative;
+  background-color: black;
+  box-shadow: -5px -5px 10px #1c1b1bde, 5px 5px 20px #464444;
+}
 
+.stories {
+  height: 65px;
+  width: 100%;
+  padding: 0px 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: black;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+}
 
-    .story{
-        height: 60px;
-        width: 60px;
-        border-radius: 50%;  
-        overflow: hidden;  
-        /*display: inline-block;*/
-        /*margin-right: 10px;*/
-        background: linear-gradient(rgb(255, 174, 0), orange, rgb(255, 32, 69), purple, rgba(0, 0, 255, 0.482));
-        padding: 2px;
-    }
+.stories::-webkit-scrollbar {
+  display: none;
+}
 
-    .story img{
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 50%;
-        border: 2px solid black;
-    }
+.story {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(rgb(255, 174, 0), orange, rgb(255, 32, 69), purple, rgba(0, 0, 255, 0.482));
+  padding: 2px;
+}
 
-    .story-user p{
-        color: white;
-        font-size: 4px;
-        /*background-color: blue;*/
-        padding: 2px 1px;
-    }
+.story img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 2px solid black;
+}
 
-    .full-screen{
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        display: none;
-        background-size: cover;
-        background-position: center;
-        z-index: 9;
-        animation: zoom 0.15s linear;
-    }
+.story-user p {
+  color: white;
+  font-size: 4px;
+  /*background-color: blue;*/
+  padding: 2px 1px;
+}
 
-    .container{
-            margin-top: 2px;
-            height: 300px;
-            width: 300px;
-            background-color: #fff;
-            position: relative;
-            overflow: hidden;
-            z-index: 5;
-        }
+.full-screen {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: none;
+  background-size: cover;
+  background-position: center;
+  z-index: 9;
+  animation: zoom 0.15s linear;
+}
 
-        .post-user{
-            position: absolute;
-            z-index: 6;
-            top: 3%;
-            left: 4%;
-        }
+.container {
+  margin-top: 2px;
+  height: 300px;
+  width: 300px;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+}
 
-        .post-user p{
-            color: white;
-            font-weight: 100;
-            font-size: 5px;
-            opacity: 0.9;
-            letter-spacing: 0.5px;
-            
-        }
+.post-user {
+  position: absolute;
+  z-index: 6;
+  top: 3%;
+  left: 4%;
+}
 
-        .container img{
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            object-position: center;
-            transition: all ease 0.3s;
+.post-user p {
+  color: white;
+  font-weight: 100;
+  font-size: 5px;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+}
 
-        }
+.container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all ease 0.3s;
+}
 
-        .container i{
-            font-size: 75px;
-            opacity: 0.8;
-            color: #fff;
-            position: absolute;
-            transform: translate(-50%, -50%) scale(0);
-            left: 50%;
-            top: 50%;
-            transition: all ease 0.3s;
-        }
+.container i {
+  font-size: 75px;
+  opacity: 0.8;
+  color: #fff;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+  left: 50%;
+  top: 50%;
+  transition: all ease 0.3s;
+}
 
-        .icons{
-            height: 30px;
-            /*background-color: blue;*/
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            padding: 9px 10px;
-        }
+.icons {
+  height: 30px;
+  /*background-color: blue;*/
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 9px 10px;
+}
 
-        .icons-left{
-            display: flex;
-            gap: 10px;
-        }
+.icons-left {
+  display: flex;
+  gap: 10px;
+}
 
-        .icons-left i{
-            font-size: 15px;
-            font-weight: 200;
-            color: white;
-        }
+.icons-left i,
+.icons-right i {
+  font-size: 15px;
+  font-weight: 200;
+  color: white;
+}
 
-        .icons-right i{
-            font-size: 15px;
-            font-weight: 200;
-            color: white;
-        }
+.loader {
+  height: 1.5px;
+  width: 100%;
+  background-color: #737272;
+  overflow: hidden;
+  position: absolute;
+  top: 2.5%;
+}
 
-    
-        .loader{
-            height: 1.5px;
-            width: 100%;
-            background-color: #737272;
-            overflow: hidden;
-            position: absolute;
-            top: 2.5%;
-          
-        }
+.load-sq {
+  height: 1.5px;
+  width: 0%;
+  background-color: rgb(255, 255, 255);
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  animation: loading 3s linear;
+}
 
-        .load-sq{
-            height: 1.5px;
-            width: 0%;
-            background-color: rgb(255, 255, 255);
-            border-top-right-radius: 2px;
-            border-bottom-right-radius: 2px;
-            animation: loading 3s linear;
-        }
+footer {
+  height: 50px;
+  width: 100%;
+  padding: 0 10px;
+  color: white;
+}
 
-        footer{
-            height: 50px;
-            width: 100%;
-            padding: 0cqi 10px;
-            color: white;
-        }
+footer p {
+  font-size: 1px;
+  line-height: 1.3;
+  padding: 1.5px 0;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
-        footer p{
-            font-size: 1px;
-            line-height: 1.3;
-            padding: 1.5px 0;
-            font-weight: 100;
-            letter-spacing: 0.5px;
-            opacity: 0.9;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
+footer i {
+  color: red;
+}
 
-        footer i{
-            color: red;
-        }
+@keyframes loading {
+  0% {
+    width: 0.5%;
+  }
+  10% {
+    width: 10%;
+  }
+  20% {
+    width: 20%;
+  }
+  30% {
+    width: 30%;
+  }
+  40% {
+    width: 40%;
+  }
+  50% {
+    width: 50%;
+  }
+  60% {
+    width: 60%;
+  }
+  70% {
+    width: 70%;
+  }
+  80% {
+    width: 80%;
+  }
+  90% {
+    width: 90%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 
-        @keyframes loading {
-            0%{
-                width: 0.5%;
-            }
-            10%{
-                width: 10%;
-            }
-            20%{
-                width: 20%;
-            }
-            30%{
-                width: 30%;
-            }
-            40%{
-                width: 40%;
-            }
-            50%{
-                width: 50%;
-            }
-            60%{
-                width: 60%;
-            }
-            70%{
-                width: 70%;
-            }
-            80%{
-                width: 80%;
-            }
-            90%{
-                width: 90%;
-            }
-            100%{
-                width: 100%;
-            }
-        }
+@keyframes zoom {
+  0% {
+    transform: scale(0.6);
+  }
+  25% {
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
-        @keyframes zoom {
-            0%{
-                transform: scale(0.6);
-            }
+@media (max-width: 600px) {
+  .card {
+    height: 600px;
+    width: 300px;
+  }
 
-            25%{
-                transform: scale(0.7);
-            }
+  footer p {
+    font-size: 10px;
+    line-height: 1.2;
+  }
 
-            50%{
-                transform: scale(0.8);
-            }
-            75%{
-                transform: scale(0.9);
-            }
-            100%{
-                transform: scale(1);
-            }
-        }
+  footer {
+    height: 50px;
+    width: 100%;
+    padding: 3px 10px;
+    color: white;
+  }
 
- @media (max-width: 600px) {
-        .card{
-        height: 600px;
-        width: 300px;
-    }
+  .post-user p {
+    font-size: 5px;
+  }
 
-        footer p{
-            font-size: 10px;
-            line-height: 1.2;
-        }
+  .icons i {
+    font-size: 18px;
+  }
 
-        footer{
-            height: 50px;
-            width: 100%;
-            padding: 3px 10px;
-            color: white;
-        }
-
-        .post-user p{
-            font-size: 5px;
-        }
-
-        .icons i{
-            font-size: 18px;
-        }
-
-        .icons{
-            padding: 9px 12px;
-        }
-    }    
+  .icons {
+    padding: 9px 12px;
+  }
+}
