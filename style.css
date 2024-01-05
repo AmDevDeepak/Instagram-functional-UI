@@ -274,3 +274,34 @@
                 transform: scale(1);
             }
         }
+
+ @media (max-width: 600px) {
+        .card{
+        height: 600px;
+        width: 300px;
+    }
+
+        footer p{
+            font-size: 10px;
+            line-height: 1.2;
+        }
+
+        footer{
+            height: 50px;
+            width: 100%;
+            padding: 3px 10px;
+            color: white;
+        }
+
+        .post-user p{
+            font-size: 5px;
+        }
+
+        .icons i{
+            font-size: 18px;
+        }
+
+        .icons{
+            padding: 9px 12px;
+        }
+    }    
